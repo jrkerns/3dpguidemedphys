@@ -1,5 +1,7 @@
 # The Medical Physicist's Guide to 3D Printing
 
+> This was originally created for the AAPM Spring Clinical 2022 meeting, but the content is evergreen.
+
 3D printing is a hugely powerful tool that is helpful in a variety of contexts, both personally and professionally. 
 Here we present a zero-to-hero guide to get you up and running as quickly as possible.
 
