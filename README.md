@@ -5,15 +5,17 @@ Here we present a zero-to-hero guide to get you up and running as quickly as pos
 
 ### Get a Printer
 
-There are a lot of 3D printers to choose from. Specifically, I'm only addressing FDM printing; there are numerous different methods of 3D printing. 
+There are a lot of 3D printers to choose from. Specifically, I'm only addressing Fused-Deposition Modeling (FDM) printing; there are numerous different methods of 3D printing. 
 I describe here the typical, consumer-level method that extrudes plastic. 
 The two that I can recommend are the [Ender 3](https://www.amazon.com/Comgrow-Creality-Ender-Aluminum-220x220x250mm/dp/B07BR3F9N6/ref=sr_1_3?crid=PO81S8XN0YT2&keywords=ender+3&qid=1647898347&sprefix=ender+3%2Caps%2C155&sr=8-3) (there is an original, Pro, and V2; any of them work) and the [Prusa MK3S](https://www.prusa3d.com/product/original-prusa-i3-mk3s-3d-printer-3/). 
 The Ender is a low-budget (~$100-$300) entry-level printer. However, it's quite capable. Just be prepared to put some work in; it's got "good bones". The Prusa MK3S is closer to a turn-key solution. 
 It has guided wizards and can come pre-assembled. Choose this if you want the results and don't care about the how. You don't have to pick one of these but I can recommend both. 
 Generally, you'll want to pick a printer that satisfies these conditions:
-  * **Is popular**. This is because the printer will thus have solutions to problems encountered vs a one-off from a no-name company. A printer is usually popular if it's 1) cheap and/or 2) has good customer support.
+  * **Is popular**. This is because the printer will have solutions to problems encountered vs a one-off from a no-name company. A printer is usually popular if it's 1) cheap and/or 2) has good customer support.
   * **Has customer support**. See above. In a professional context you want either: a) a clinical person who can become knowledgeable about 3D printing or b) good customer support.
-  * **Will print the materials you need to**. See below about filaments. If you're just doing mechanical things, an open-frame printer without an enclosure is fine. If you want to do very large items or difficult materials, you may want to either pick a printer that focuses on that or buy an encloser for an open-frame printer. FFIW, I use an open-frame printer and only with the most difficult of models do I run into issues.
+  * **Will print the materials you need to**. See below about filaments. If you're printing simple models that will not be in heavy-duty usage, an open-frame printer without an enclosure is fine as the temperatures required for simpler filaments is lower.
+    If you want to do very large items or print with difficult materials that require a high temperature (250C+), you may want to either pick a printer that focuses on that or buy an enclosure for an open-frame printer as it regulates the ambient air around the printer. 
+    FFIW, I use an open-frame printer and only with the most difficult of models do I run into issues.
   
 TL;DR: Get a Prusa if you want turn-key. Get an Ender or clone if you're interested in the craft and don't mind fixing it when it breaks. For 95% of you, I'd suggest a Prusa.
 
@@ -30,7 +32,7 @@ Again, we're only talking about FDM printing. For this, the common materials are
 
 For more detailed info and comparison, see [this chart](https://www.help.prusa3d.com/en/materials?msclkid=fcf9ebf6a96011ec9441a8a469e56502). 
 
-The thing to be aware of is your end use case and the conditions the part will be in. If the conditions are high-temperature, PETG and Nylon are preferable. If durability is key, Nylon or PC are best. If it's just to keep two 
+The thing to be aware of is your end use case and the conditions the part will be in. If the usage conditions are high-temperature (65C+), PETG and Nylon are preferable. If durability is key, Nylon or Polycarbonate (PC) are best. If it's just to keep two 
 parts together or you want to test mechanical fit first on the cheap, use PLA. If flexibility is key (like a breast bolus), use TPU. If you don't know what to use, use PLA or 
 PLA+. The "+" in PLA is not standardized and is specific to each company. Generally, this can mean increased temperature resistance or ductility. 
 
@@ -49,8 +51,9 @@ TL;DR: Use PLA as your first filament and for basic prints. Branch out to other 
 
 ### Creating/Getting models
 
-* **Finding a model**: You can find literally millions of designs for free on sites such as [Thingiverse](https://www.thingiverse.com/) or [PrusaPrinters](https://www.prusaprinters.org/prints). This works well for items lots of people use, but it's uncommon to find things physicist may want or need given the audience size. Still, it's always preferable to do a search before creating your own model to save time if you can. 
-* **Creating a model**: Eventually, you'll need to create your own model of something. There are lots of free resources on this. The two I can recommend are [TinkerCAD](https://www.tinkercad.com/) and [Fusion360](https://www.autodesk.com/products/fusion-360/overview). TinkerCAD can do 80% of what you are likely to need and is easy to use. Fusion360 is professional CAD software and can do everything you could *ever* want to do. Note, it's not free for commercial use however. There are resources on how to learn both with a simple Google search.
+* **Finding a model**: You can find literally millions of designs for free on sites such as [Thingiverse](https://www.thingiverse.com/) or [PrusaPrinters](https://www.prusaprinters.org/prints). This works well for items lots of people use, but it's uncommon to find things a physicist may want or need given the audience size. Still, it's always preferable to do a search before creating your own model to save time if you can. 
+* **Creating a model**: Eventually, you'll need to create your own model of something. There are lots of free resources on this. The two I can recommend are [TinkerCAD](https://www.tinkercad.com/) and [Fusion360](https://www.autodesk.com/products/fusion-360/overview). TinkerCAD can do 80% of what you are likely to need and is easy to use. 
+  Fusion360 is professional CAD software and can do everything you could *ever* want to do. However, it's not free for commercial use. There are resources on how to learn both with a simple Google search.
 
 In the 3D printing community, it is tradition to print out a ["Benchy"](https://www.prusaprinters.org/prints/3161-3d-benchy) as your first print. 
 I would suggest downloading models first to get the rest of the printing process down before creating your own. When you realize the strengths and weaknesses of 3D printing you can design your model with this in mind.
@@ -59,7 +62,7 @@ I would suggest downloading models first to get the rest of the printing process
 
 "Slicing" is the process of converting the models we downloaded or created above from 3D geometrical concepts to instructions the 3D printer will understand in order to create the model.
 This is the simplest step but still takes a knack to get it right all the time. The two most common slicers are [Cura](https://ultimaker.com/software/ultimaker-cura) and [PrusaSlicer](https://www.prusa3d.com/page/prusaslicer_424/). 
-They'll both do what you need and have plenty of advanced options. Honestly, it's the dealers choice. If you go with a Prusa printer, PrusaSlicer works with it well but you're more that free to use Cura with it too.
+They'll both do what you need and have plenty of advanced options. Honestly, it's the dealers choice. If you go with a Prusa printer, PrusaSlicer works well with it, but you're more than free to use Cura with it too.
 
 The most common parameters to be aware of when slicing are:
 
@@ -81,7 +84,7 @@ To actually print the part you'll typically save the G-code file to an SD card o
 The most common issues at this stage is when doing your first few prints. After working these out, you typically won't have
 any problems, or you'll know how to fix them easily. 
 
-* **Bed leveling/tramming**: This refers to the process of make the plane of the bed perfectly offset from the hotend. 
+* **Bed leveling/tramming**: This refers to the process of making the plane of the bed perfectly offset from the hotend. 
   3D printers are mechanical beings, and as such have mechanical tolerances and play in movement. Out of the box, 
   your bed may not be aligned perfectly. The process of bed leveling is either pretty easy if you have something like 
   a Prusa, or more involved with an Ender 3. Google and Youtube are helpful here as it can depend on your printer model.
