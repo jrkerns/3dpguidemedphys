@@ -1,4 +1,4 @@
-# The Medical Physicist's Guide to 3D Printing
+# The Medical Physicist's Introduction to 3D Printing
 
 > This was originally created for the AAPM Spring Clinical 2022 meeting, but the content is evergreen.
 
